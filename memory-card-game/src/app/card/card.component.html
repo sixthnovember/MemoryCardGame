@@ -1,0 +1,8 @@
+<div class="card" [class.show]="show" (click)="flipCard()">
+  <div class="front">
+    <span *ngIf="show">{{ icon }}</span>
+  </div>
+  <div class="back">
+    <small *ngIf="!show">❓</small>
+  </div>
+</div>

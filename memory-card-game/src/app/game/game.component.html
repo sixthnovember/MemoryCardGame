@@ -1,0 +1,9 @@
+<h1>Memory Card Game</h1>
+<div class="container">
+  <app-card
+    *ngFor="let card of cards; let i = index"
+    [icon]="card.icon"
+    [show]="card.show"
+    (cardClick)="handleCardClick(i)"
+  ></app-card>
+</div>

@@ -1,0 +1,50 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  height: 120px;
+  width: 120px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s linear, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.show {
+  transform: rotateY(0deg);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .front,
+.card .back {
+  background-color: #fff;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  font-size: 36px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  font-size: 16px;
+}
